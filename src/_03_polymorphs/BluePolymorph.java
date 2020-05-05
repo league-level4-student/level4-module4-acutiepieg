@@ -4,8 +4,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class BluePolymorph extends Polymorph{
-	private int width;
-	private int height;
+	private int width = 100;
+	private int height = 100;
 	
 	public int getWidth() {
 		return width;
@@ -30,7 +30,7 @@ public class BluePolymorph extends Polymorph{
 	@Override
 	public void draw(Graphics g) {
 		g.setColor(Color.blue);
-		g.fillRect(width, height, 50, 50);
+		g.fillRect(super.getX(), super.getY(), width, height );
 	}
 	
 }

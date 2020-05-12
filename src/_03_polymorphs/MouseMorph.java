@@ -6,7 +6,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-public class MouseMorph extends Polymorph  {
+public class MouseMorph extends Polymorph {
 
 	MouseMorph(int x, int y) {
 		super(x, y);
@@ -36,18 +36,11 @@ public class MouseMorph extends Polymorph  {
 		g.setColor(Color.gray);
 		g.fillRect((int) super.getX(), (int) super.getY(), width, height);
 	}
-
-
-	@Override
-	public void mouseDragged(MouseEvent e) {
-		// TODO Auto-generated method stub
+	
+	public void move(MouseEvent e) {
+		super.setX(e.getX());
+		super.setY(e.getY());
 		
 	}
 
-	@Override
-	public void mouseMoved(MouseEvent e) {
-		// TODO Auto-generated method stub
-		super.setX(e.getX());
-		super.setY(e.getY());
-	}
 }

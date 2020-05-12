@@ -5,7 +5,9 @@ import java.awt.Graphics;
 
 public class CircleMorph extends Polymorph {
 
-	double angle = 0;
+	private double angle = 0;
+
+	
 
 	CircleMorph(int x, int y) {
 		super(x, y);
@@ -28,6 +30,14 @@ public class CircleMorph extends Polymorph {
 
 	public void setHeight(int height) {
 		this.height = height;
+	}
+	
+	public double getAngle() {
+		return angle;
+	}
+
+	public void setAngle(double angle) {
+		this.angle = angle;
 	}
 
 	@Override

@@ -31,6 +31,6 @@ public class RedMorph extends Polymorph {
 	@Override
 	public void draw(Graphics g) {
 		g.setColor(Color.red);
-		g.fillRect(super.getX(), super.getY(), width, height);
+		g.fillRect((int) super.getX(), (int) super.getY(), width, height);
 	}
 }

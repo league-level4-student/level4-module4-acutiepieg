@@ -2,11 +2,13 @@ package _03_polymorphs;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
-public class MovingMorph extends Polymorph {
-	int speed = - 2;
-	
-	MovingMorph(int x, int y) {
+public class MouseMorph extends Polymorph  {
+
+	MouseMorph(int x, int y) {
 		super(x, y);
 	}
 
@@ -31,19 +33,21 @@ public class MovingMorph extends Polymorph {
 
 	@Override
 	public void draw(Graphics g) {
-		g.setColor(Color.GREEN);
+		g.setColor(Color.gray);
 		g.fillRect((int) super.getX(), (int) super.getY(), width, height);
+	}
+
+
+	@Override
+	public void mouseDragged(MouseEvent e) {
+		// TODO Auto-generated method stub
 		
 	}
-	
-	public void update() {
-		if(super.getX() < 500 - width && super.getX() > 0) {
-			super.setX(super.getX() + speed);
-		}
-		else {
-			speed = speed * -1;
-			super.setX(super.getX() + speed);
-		}
-	
+
+	@Override
+	public void mouseMoved(MouseEvent e) {
+		// TODO Auto-generated method stub
+		super.setX(e.getX());
+		super.setY(e.getY());
 	}
 }

@@ -17,7 +17,7 @@ public class Doctor extends Hospital {
 	}
 
 	public void assignPatient(Patient patient) throws DoctorFullException {
-		if (patientsAssigned.size() > 3) {
+		if (patientsAssigned.size() >= 3) {
 			throw new DoctorFullException();
 		} else {
 			patientsAssigned.add(patient);

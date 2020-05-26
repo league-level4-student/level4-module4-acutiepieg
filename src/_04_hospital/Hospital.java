@@ -26,19 +26,21 @@ public class Hospital {
 		int counter = 0;
 		int doctor = 0;
 		for (int i = 0; i < patients.size(); i++) {
+			System.out.println(i + " " + patients.get(i));
 			if (counter < 3) {
-				counter++;
 				try {
+					System.out.println("adding to doctor" + doctors.get(doctor).patientsAssigned.size());
 					doctors.get(doctor).assignPatient(patients.get(i));
 				} catch (DoctorFullException e) {
 					e.printStackTrace();
 				}
+				counter++;
 			} else {
-				counter = 0;
+				counter = 1;
 				doctor++;
 				try {
+					System.out.println("adding to doctor" + doctors.get(doctor).patientsAssigned.size());
 					doctors.get(doctor).assignPatient(patients.get(i));
-					System.out.println("change doctors");
 				} catch (DoctorFullException e) {
 					e.printStackTrace();
 				}
